@@ -46,14 +46,22 @@ var vm = new Vue({
                 success:function(res){
                     console.log(res);
                     if(res.code==0){
-                        console.log(res.account);
                         vm.account = res.account;
-                    }else{
-                        console.log(res);
+                    }else if(res.code==3){
+                        swal(res.msg, {
+                           buttons: false,
+                           timer: 2000,
+                         }).then((value) => {
+                            window.location.href='login.html'
+                        });
                     }
                 },
                 error: function(res) {
-                    console.log(res);
+                    swal({
+                       text: res.msg,
+                       icon: "error",
+                       button: "返回",
+                      });
                 }
             });
         }
