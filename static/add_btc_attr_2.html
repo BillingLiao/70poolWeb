@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>持有算力-麒麟云算</title>
+	<title>添加btc钱包地址-麒麟云算</title>
 	<meta name="keywords" content="麒麟云算" />
 	<meta name="description" content="麒麟云算" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -31,30 +31,40 @@
 
 
 <body class="cbp-spmenu-push">
-<div id="page">
+<div id="page" v-cloak>
 
 	<!--header-->
     <div id="header">
-		<div class="logo">持有算力</div>
+		<div class="logo">添加btc钱包地址</div>
 	</div>
 	<!--header end-->
 
 
+
 	<!--个人信息-->
 	<div class="conbox">
+		<div class="account_list">
 
-		<div class="stats_3">
-			<h2><p>持有算力</p>{{account.amount}}T</h2>
-			<h2><p>持有金额（BTC钱包）</p>{{account.btcBalance}}<a href="record_tx.html">提现</a></h2>
-			<h2><p>昨日收益（BTC）</p>+{{account.btcYesterday}}<a href="mall.html">买入</a></h2>
-			<h2><p>累计收益（BTC）</p>+{{account.btcCount}}<a href="record.html">交易记录</a></h2>
+			<!--个人中心-->
+			<div class="info_form">
+
+				<ul class="resume">
+
+					<div class="re_box personal">
+						<p class="tips">请仔细核对输入的btc钱包账号</p>
+						<li><label>btc地址：</label><input type="text" placeholder="未填写" v-model="addr"/></li>
+						</li>
+					</div>
+
+					<div class="index_reg"><a @click="save">确定保存</a></div>
+
+				</ul>
+
+			</div>
+			<!--个人中心 end-->
+
+
 		</div>
-
-		<div class="cy_btn"><a href="income.html">收益记录</a></div>
-
-		<div class="stats_img"><img src="images/a_3.jpg" alt="" /></div>
-
-
 	</div>
 	<!--个人信息 end-->
 
@@ -79,6 +89,6 @@
 
 </div>
 
-<script type="text/javascript" src="js/modules/hold.js"></script>
+<script stype="text/javascript" src="js/modules/add_btc_attr_2.js"></script>
 </body>
 </html>
